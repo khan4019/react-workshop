@@ -32,40 +32,14 @@
         name: 'Dude'
     }
 
-    class Counter extends React.Component{
-        constructor(){
-            super();
-            this.state={
-                count:0
-            }
-        }
-
-        handleDecrease = () => {
-            const newCount = this.state.count - 1;
-            this.setState({count: newCount})
-        }
-
-        handleIncrease = () => {
-            const newCount = this.state.count + 1;
-            this.setState({count: newCount})
-        }
-
-        render(){
-            return (
-                <div>
-                    <h2>My Counter: {this.state.count}</h2>
-                    <button onClick={this.handleDecrease}>-</button>
-                    <button onClick={this.handleIncrease}>+</button>
-                </div>
-            )
-        }
-    }
-
     function App(){
         return (
             <div>
                 <h1>Hello React</h1>
-                <Counter/>
+                <MyComponent name="Messi"/>
+                <MyComponent name="Ronaldo"/>
+                <MyComponent name="ABC"/>
+                <MyComponent/>
             </div>
         )
     }
