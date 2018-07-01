@@ -1,0 +1,398 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8">
+
+	<title>React Workshop</title>
+
+	<meta name="description" content="A framework for easily creating beautiful presentations using HTML">
+	<meta name="author" content="Jhankar Mahbub">
+
+	<meta name="apple-mobile-web-app-capable" content="yes">
+	<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+	<link rel="stylesheet" href="css/reveal.css">
+	<link rel="stylesheet" href="css/theme/white.css" id="theme">
+	<link rel="shortcut icon" href="./images/react.png" type="image/x-icon">
+	<!-- Theme used for syntax highlighting of code -->
+	<link rel="stylesheet" href="lib/css/zenburn.css">
+	<link rel="stylesheet" href="css/custom.css">
+	<script src="https://use.typekit.net/jor2kyz.js"></script>
+	<script>try { Typekit.load({ async: true }); } catch (e) { }</script>
+
+	<!-- Printing and PDF exports -->
+	<script>
+		var link = document.createElement('link');
+		link.rel = 'stylesheet';
+		link.type = 'text/css';
+		link.href = window.location.search.match(/print-pdf/gi) ? 'css/print/pdf.css' : 'css/print/paper.css';
+		document.getElementsByTagName('head')[0].appendChild(link);
+	</script>
+
+	<!--[if lt IE 9]>
+		<script src="lib/js/html5shiv.js"></script>
+		<![endif]-->
+</head>
+
+<body>
+
+	<div class="reveal">
+
+		<!-- Any section element inside of this container is displayed as a slide -->
+		<div class="slides">
+			<section data-background="" class="first-slide1">
+				<img src="images/react2.jpg" class="logo-image" />
+				<h1>React Workshop</h1>
+				<h3>for Absolute Beginners</h3>
+
+				<br>
+				<p style="font-size: 70%; opacity: 0.5" class="normal-font">
+					by Jhankar Mahbub /
+					<a href="https://twitter.com/jsdude005">@jsdude005</a>
+				</p>
+				<p>
+					<small>
+						<a href="http://thatjsdude.com/">www.thatJSDude.com</a>
+					</small>
+				</p>
+			</section>
+			<section>
+				<section>
+					<h2>Who is</h2>
+					<h1>JS Dude?</h1>
+				</section>
+				<section>
+					<img src="./images/others/dude.jpeg" alt="">
+					<ul>
+						<li style="color:purple">
+							<strong>@jsdude005</strong>
+						</li>
+						<li>Organize Chicago JavaScript Meetup</li>
+						<li>Sr. Web Developer, Nielsen</li>
+						<li>React, Redux and JavaScript Trainer</li>
+						<li>Enjoy Learning, Talking about JavaScript</li>
+						<!-- <li>Chicago Code Camp in 2013 - 2018</li> -->
+					</ul>
+				</section>
+				<section>
+					<h2>Jump from 14,000ft </h2>
+					<img src="./images/others/jump.JPG" alt="">
+				</section>
+				<!-- <section>
+					<img src="./images/others/skydiving.JPG" alt="">
+				</section> -->
+				<section>
+					<h2>Marathon 2016, 2017</h2>
+					<img src="./images/others/marathon.jpg" alt="">
+				</section>
+				<section>
+					<h2>10,000 volts</h2>
+					<img src="./images/others/mudder.jpg" alt="">
+				</section>
+				<section>
+					<h4>international Javascript conference, London</h4>
+					<img src="./images//others//london.jpg" alt="">
+				</section>
+			</section>
+			<section>
+				<section>
+					<h1>What is React?</h1>
+					<img src="./images/react2.png" alt="">
+					<aside class="notes">
+						<h2>React gives you very nice way to create small pieces of your website...called component</h2>
+						<p>You can easily manage state of your data</p>
+						<p>Efficient way to update DOM</p>
+						<p>pass data to component</p>
+						<p>Integrate with your favortie library</p>
+					</aside>
+				</section>
+				<section>
+					<h2>React Vs Angular vs Vue</h2>
+					<img style="height:600px;" src="./images/reactVsOthers.png" alt="">
+				</section>
+				<!-- <section>
+					<h2>When to use redux?</h2>
+				</section> -->
+			</section>
+			<section>
+				<h2>Your Goal</h2>
+				<img src="./images/repeat.png" alt="">
+			</section>
+			<section>
+				<h2>Four core concepts</h2>
+				<ul>
+					<li>Component</li>
+					<li>JSX</li>
+					<li>Props</li>
+					<li>State</li>
+				</ul>
+			</section>
+			<section>
+				<section>
+					<h1>Component</h1>
+				</section>
+				<section>
+					<h2>What is a component</h2>
+					<ul>
+						<li>Unit</li>
+						<li>Repeating</li>
+						<li>Grouping</li>
+						<li>Breaking Down</li>
+					</ul>
+				</section>
+				<section>
+					<h1>Quiz Time?</h1>
+				</section>
+				<section>
+					<h3>What is repeating in this pic?</h3>
+					<img src="./images/koala.png" alt="">
+				</section>
+				<section>
+					<img src="./images/koala_detail.png" alt="">
+				</section>
+			</section>
+			<!-- <section>
+				<h2>Four commands</h2>
+				<pre class="hljs script"><code>
+npm install -g create-react-app
+
+create-react-app ema-john
+
+cd techmaster
+
+npm start
+				</code></pre>
+			</section> -->
+			<section>
+				<section>
+					<h1>Component Life Cycle</h1>
+				</section>
+				<section>
+					<img src="./images/lifeCycle/lifeCycle_1.png" alt="">
+				</section>
+				<section>
+					<img src="./images/lifeCycle/lifeCycle_2.png" alt="">
+				</section>
+				<section>
+					<img src="./images/lifeCycle/lifeCycle_3.png" alt="">
+				</section>
+				<section>
+					<img src="./images/lifeCycle/lifeCycle_4.png" alt="">
+				</section>
+				<section>
+					<img src="./images/lifeCycle/lifeCycle_5.png" alt="">
+				</section>
+				<section>
+					<img src="./images/lifeCycle/lifeCycle_6.png" alt="">
+				</section>
+				<section>
+					<img src="./images/lifeCycle/lifeCycle_7.png" alt="">
+				</section>
+				<section>
+					<img src="./images/lifeCycle/lifeCycle_full.png" alt="">
+				</section>
+			</section>
+			<section>
+				<section>
+					<h1>ES6, ES7 Features</h1>
+				</section>
+			</section>
+			<section>
+				<section>
+					<h2>Prop Vs State</h2>
+				</section>
+				<section>
+					<img src="./images/propVsState.png" alt="">
+				</section>
+			</section>
+			<section>
+				<h2>Five core Activities</h2>
+				<ul>
+					<li>Manage Events</li>
+					<li>Component Life cycle</li>
+					<li>Load Data From server</li>
+					<li>Use External Library</li>
+				</ul>
+			</section>
+			<section>
+				<section>
+					<h1>Routing</h1>
+				</section>
+				<section>
+					<img src="./images/redux/restroom4.jpeg" alt="">
+				</section>
+				<!-- <section>
+							<img src="./images/redux/restroom3.jpg" alt="">
+						</section> -->
+			</section>
+			<section>
+				<section>
+					<h1>ema-john</h1>
+					<h2>Architecture Review</h2>
+				</section>
+				<section>
+					<img src="./images/redux/structure1.png" alt="">
+				</section>
+				<section>
+					<img src="./images/redux/structure2.png" alt="">
+				</section>
+				<section>
+					<img src="./images/redux/structure3.png" alt="">
+				</section>
+				<section>
+					<img src="./images/redux/structure5.png" alt="">
+				</section>
+				<section>
+					<img src="./images/redux/structure4.png" alt="">
+				</section>
+
+				<section>
+					<img src="./images/redux/superhero1.jpeg" alt="">
+					<p>To solve this problem, we need a super hero</p>
+				</section>
+			</section>
+			<section>
+				<section>
+					<h1>Redux</h1>
+				</section>
+				<section>
+					<h2>When to use Redux?</h2>
+					<ul>
+						<li>Large application with 5+ level deeper</li>
+						<li>5+ routes</li>
+						<li>Complex state</li>
+						<li>Larger team</li>
+						<li class="fragment purple">The demo app will not be a good practical redux</li>
+					</ul>
+				</section>
+			</section>
+			<section>
+				<section>
+					<h1>Learn New thing</h1>
+				</section>
+				<section>
+					<h2>Learn react by building</h2>
+					<ul>
+						<li>Build an
+							<a target="_blank" href="https://ema-john.firebaseapp.com/">e-commerce site</a>
+						</li>
+					</ul>
+					<img class="fragment" style="height:500px;" src="./images/others/workshop1.jpg" alt="">
+				</section>
+				<section>
+					<p>
+						<a href="http://thatjsdude.com/workshops/react/">thatjsdude.com/workshops/react</a>
+					</p>
+					Email:
+					<span>khan4019@gmail.com</span>
+				</section>
+			</section>
+			<section>
+				<h2>References</h2>
+				<ul>
+					<li>
+						<a href="https://reactjs.org/blog/2018/03/29/react-v-16-3.html">New lifecycles and context API</a>
+					</li>
+					<li>
+						<a href="https://reactjs.org/blog/2018/03/27/update-on-async-rendering.html">Update on Async Rendering</a>
+					</li>
+					<li>
+						<a href="https://reactjs.org/blog/2018/06/07/you-probably-dont-need-derived-state.html">You Don't Need Derived State</a>
+					</li>
+					<li>
+						<a href="https://reactjs.org/docs/forwarding-refs.html">Forwarding Refs</a>
+					</li>
+					<li>
+						<a href="https://reactjs.org/docs/error-boundaries.html">Error Boundaries</a>
+					</li>
+				</ul>
+			</section>
+			<!-- <section>
+				<section>
+					<h1>Free Tip</h1>
+				</section>
+				<section>
+					<p>Tight on food budget</p>
+					<img class="fragment" src="./images/banana.jpg" alt="">
+				</section>
+				<section>
+					<img src="./images/banana-single.jpg" alt="">
+				</section>
+				<section>
+					<p>Want to save more...</p>
+					<img class="fragment" src="./images/meetup.jpg" alt="">
+				</section>
+				<section>
+					<p>Save even more...</p>
+					<img class="fragment" src="./images/tshirt.jpeg" alt="">
+				</section>
+				<section>
+					<p>Ultimate saver...</p>
+					<img class="fragment" src="./images/gym.jpg" alt="">
+					<aside class="notes">
+						<p>Work extra hour in office...</p>
+						<p>You can stay in the office</p>
+						<p>If you need to take a shower once in a month...</p>
+						<p>get a free pass from LA Fitness or any other gym</p>
+					</aside>
+				</section>
+			</section> -->
+			<section style="text-align: left;">
+				<h1>Thank you</h1>
+				<p>
+					-Twitter:
+					<a href="">@jsDude005</a>
+					<p>-Website:
+						<a href="http://thatjsdude.com">thatJsDude.com</a>
+					</p>
+					<p>-Workshop:
+						<a href="http://thatjsdude.com/workshops/react/">thatjsdude.com/workshops/react/</a>
+					</p>
+					<p>-Youtube:
+						<a href="https://www.youtube.com/c/ThatJSDude">youtube.com/c/ThatJSDude</a>
+					</p>
+					<small>-Email:
+						<a href="https://twitter.com/jsdude005">khan4019@gmail.com</a>
+					</small>
+
+				</p>
+			</section>
+
+		</div>
+
+	</div>
+
+	<script src="lib/js/head.min.js"></script>
+	<script src="js/reveal.js"></script>
+
+	<script>
+
+		// More info https://github.com/hakimel/reveal.js#configuration
+		Reveal.initialize({
+			controls: true,
+			progress: true,
+			history: true,
+			center: true,
+
+			transition: 'slide', // none/fade/slide/convex/concave/zoom
+
+			// More info https://github.com/hakimel/reveal.js#dependencies
+			dependencies: [
+				{ src: 'lib/js/classList.js', condition: function () { return !document.body.classList; } },
+				{ src: 'plugin/markdown/marked.js', condition: function () { return !!document.querySelector('[data-markdown]'); } },
+				{ src: 'plugin/markdown/markdown.js', condition: function () { return !!document.querySelector('[data-markdown]'); } },
+				{ src: 'plugin/highlight/highlight.js', async: true, callback: function () { hljs.initHighlightingOnLoad(); } },
+				{ src: 'plugin/search/search.js', async: true },
+				{ src: 'plugin/zoom-js/zoom.js', async: true },
+				{ src: 'plugin/notes/notes.js', async: true }
+			]
+		});
+
+	</script>
+
+</body>
+
+</html>
