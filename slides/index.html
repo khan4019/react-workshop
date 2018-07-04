@@ -101,21 +101,19 @@
 				<section>
 					<h1>What is React?</h1>
 					<img src="./images/react2.png" alt="">
-					<aside class="notes">
-						<h2>React gives you very nice way to create small pieces of your website...called component</h2>
-						<p>You can easily manage state of your data</p>
-						<p>Efficient way to update DOM</p>
-						<p>pass data to component</p>
-						<p>Integrate with your favortie library</p>
-					</aside>
+				</section>
+				<section>
+					<h2>Why React?</h2>
+					<h2>React gives you very nice way to create small pieces of your website...called component</h2>
+					<p>You can easily manage state of your data</p>
+					<p>Efficient way to update DOM</p>
+					<p>pass data to component</p>
+					<p>Integrate with your favortie library</p>
 				</section>
 				<section>
 					<h2>React Vs Angular vs Vue</h2>
 					<img style="height:600px;" src="./images/reactVsOthers.png" alt="">
 				</section>
-				<!-- <section>
-					<h2>When to use redux?</h2>
-				</section> -->
 			</section>
 			<section>
 				<h2>Your Goal</h2>
@@ -168,6 +166,17 @@ npm start
 			</section> -->
 			<section>
 				<section>
+					<h1>JSX</h1>
+				</section>
+				<section>
+					<h2>Why JSX</h2>
+				</section>
+				<section>
+					<h2>JSX corner cases</h2>
+				</section>
+			</section>
+			<section>
+				<section>
 					<h1>Component Life Cycle</h1>
 				</section>
 				<section>
@@ -198,6 +207,69 @@ npm start
 			<section>
 				<section>
 					<h1>ES6, ES7 Features</h1>
+				</section>
+				<section>
+					<h2>Arrow function</h2>
+					<pre class="hljs1"><code>
+
+const nums = [1, 2, 3, 4, 5, 6];
+
+var double = nums.map(function (item){
+	return item*2;
+});
+
+
+
+const slim = nums.map( i => i*2);
+
+						</code></pre>
+				</section>
+				<section>
+					<h2>Arrow function</h2>
+					<pre class="hljs1"><code>
+const slim1 = () => 10;
+	
+
+const slim2 = x => x * x;
+	
+
+const slim3 = (a, b) => a + b;
+
+
+const arrow = (a, b) => { const c = a + b; return c * 10; }
+							</code></pre>
+				</section>
+				<section>
+					<h2>Class</h2>
+					<img src="./images/es6/parent.png" alt="">
+				</section>
+				<section>
+					<h2>Extends</h2>
+					<img src="./images/es6/child.png" alt="" class="fragment1">
+				</section>
+				<section>
+					<h2>Default exports (one per module)</h2>
+					<pre><code>
+						export default function () {}
+
+						import myFunc from 'myFunc';
+					</code></pre>
+					<pre class="fragment"><code>
+							//------ lib.js ------
+						export let counter = 3;
+export function incCounter() {
+    counter++;
+}
+
+//------ main.js ------
+import { counter, incCounter } from './lib';
+					</code></pre>
+				</section>
+				<section>
+					<h2>Finish the import</h2>
+					<p>
+						<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/import">MDN: import</a>
+					</p>
 				</section>
 			</section>
 			<section>
@@ -271,6 +343,65 @@ npm start
 			</section>
 			<section>
 				<section>
+					<h1>Virtual DOM</h1>
+					<h3>React Fiber</h3>
+				</section>
+				<section>
+					<h2>What is Virtual DOM</h2>
+				</section>
+			</section>
+			<section>
+				<section>
+					<h1>Routing</h1>
+				</section>
+				<section>
+					<img src="./images/redux/restroom4.jpeg" alt="">
+				</section>
+				<section>
+					<img src="./images/redux/restroom3.jpg" alt="">
+				</section>
+			</section>
+			<section>
+				<section>
+					<h1>ema-john</h1>
+					<h2>Architecture Review</h2>
+				</section>
+				<section>
+					<img src="./images/redux/structure1.png" alt="">
+				</section>
+				<section>
+					<img src="./images/redux/structure2.png" alt="">
+				</section>
+				<section>
+					<img src="./images/redux/structure3.png" alt="">
+				</section>
+				<section>
+					<img src="./images/redux/structure5.png" alt="">
+				</section>
+				<section>
+					<img sr c="./images/redux/structure4.png" alt="">
+				</section>
+
+				<section>
+					<img src="./images/redux/superhero1.jpeg" alt="">
+					<p>To solve this problem, we need a super hero</p>
+				</section>
+			</section>
+			<section>
+				<section>
+					<h1>Deploy</h1>
+				</section>
+				<section>
+					<h2>Unit Test</h2>
+				</section>
+			</section>
+			<section>
+				<section>
+					<h1>React Devtool</h1>
+				</section>
+			</section>
+			<section>
+				<section>
 					<h1>Learn New thing</h1>
 				</section>
 				<section>
@@ -310,16 +441,37 @@ npm start
 					</li>
 				</ul>
 			</section>
-			<!-- <section>
+			<section>
 				<section>
 					<h1>Free Tip</h1>
 				</section>
 				<section>
-					<p>Tight on food budget</p>
-					<img class="fragment" src="./images/banana.jpg" alt="">
+					<p>Why Developers have happy family</p>
+					<ul>
+						<li></li>
+						<li></li>
+						<li></li>
+						<li></li>
+						<li>Take all the argument offline</li>
+						<li></li>
+						<li></li>
+						<li></li>
+					</ul>
+					After two weeks of dating, they send you a text saying ‘happy first iteration’. Not a single friend or family member understand
+					what they do. After your first argument, they ask for a retro. They talk about your parents as stakeholders. Choosing
+					where to go out, they want to play Crazy 8’s to decide. They talk about spending a weekend away together as an offsite.
+					You go to a restaurant, and they complain about the accessibility of the menu. When there’s a problem, they keep saying
+					‘trust the process’. When you tell them ‘we need to organise something’, they ask you to put it in the backlog. When
+					you ask how long they want to go on holiday for, they say ‘maybe one sprint’. For your wedding ring, they buy you a
+					double diamond.
+					<p>
+						<small>
+							<a href="https://uxplanet.org/12-signs-youre-dating-a-ux-designer-354b574426b2">this</a>
+						</small>
+					</p>
 				</section>
 				<section>
-					<img src="./images/banana-single.jpg" alt="">
+
 				</section>
 				<section>
 					<p>Want to save more...</p>
@@ -339,7 +491,7 @@ npm start
 						<p>get a free pass from LA Fitness or any other gym</p>
 					</aside>
 				</section>
-			</section> -->
+			</section>
 			<section style="text-align: left;">
 				<h1>Thank you</h1>
 				<p>
