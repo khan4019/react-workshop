@@ -104,7 +104,7 @@
 				</section>
 				<section>
 					<h2>Why React?</h2>
-					<h2>React gives you very nice way to create small pieces of your website...called component</h2>
+					<p>React gives you very nice way to create small pieces of your website...called component</p>
 					<p>You can easily manage state of your data</p>
 					<p>Efficient way to update DOM</p>
 					<p>pass data to component</p>
@@ -142,6 +142,20 @@
 					</ul>
 				</section>
 				<section>
+					<h2>Three ways to declare</h2>
+					<ol>
+						<li>As a
+							<code>const</code>
+						</li>
+						<li>As a
+							<code>function</code>
+						</li>
+						<li>As a
+							<code>class</code>
+						</li>
+					</ol>
+				</section>
+				<section>
 					<h1>Quiz Time?</h1>
 				</section>
 				<section>
@@ -170,9 +184,33 @@ npm start
 				</section>
 				<section>
 					<h2>Why JSX</h2>
+					<ul>
+						<li class="fragment">Not a templating language</li>
+						<li class="fragment">Basic Html powered by Javascript</li>
+						<li class="fragment">Describe how UI should look like</li>
+						<li class="fragment">Put markup and logic at the sameplaces</li>
+						<li class="fragment">It's not mandatory but everyone uses it</li>
+						<li class="fragment">Allows ussage of all JavaScript power</li>
+					</ul>
 				</section>
 				<section>
-					<h2>JSX corner cases</h2>
+					<h2>JSX Summary</h2>
+					<ul>
+						<li class="fragment">Valid HTML and custom components as tag</li>
+						<li class="fragment">Extra attributes to pass as props</li>
+						<li class="fragment">Put all dynamic part inside {}</li>
+						<li class="fragment">Events camel cases
+							<code>onCLick</code>
+						</li>
+						<li class="fragment">attributes camel cases
+							<code>tabIndex, colSpan</code>
+						</li>
+						<li class="fragment">
+							<code>className</code> instead of
+							<code>class</code>attribute</li>
+						<li class="fragment">Add key while looping array to create elements</li>
+
+					</ul>
 				</section>
 			</section>
 			<section>
@@ -274,19 +312,80 @@ import { counter, incCounter } from './lib';
 			</section>
 			<section>
 				<section>
-					<h2>Prop Vs State</h2>
+					<h2>Props and State</h2>
 				</section>
 				<section>
-					<img src="./images/propVsState.png" alt="">
+					<h2>Props</h2>
+					<ul>
+						<li>Send data to the child component</li>
+						<li class="fragment">pass data it by attribute</li>
+						<li class="fragment">values set by
+							<code>attrbute={}</code>
+						</li>
+						<li class="fragment">Can set default vlaue outside of the receiving Compoent</li>
+						<li class="fragment">
+							<code>children</code>is automatically added to pass child element</li>
+						<li class="fragment">props is readonly</li>
+					</ul>
+				</section>
+				<section>
+					<h2>State</h2>
+					<ul>
+						<li>Declared inside constructor</li>
+						<li class="fragment">Set initial value while declaring</li>
+						<li class="fragment">Don't set value directly</li>
+						<li class="fragment">use
+							<code>this.setState()</code> and pass key-value</li>
+						<li class="fragment">State only available inside the component where it declared</li>
+						<li class="fragment">state updat is asynchronous</li>
+						<li class="fragment">
+							<code>this.setState()</code>can take a function as well</li>
+					</ul>
+					<p>state immutable(?)</p>
+				</section>
+				<section>
+					<h2>Props vs State</h2>
+					<table class="small-table">
+						<thead>
+							<tr class="fragment">
+								<td>Description</td>
+								<td>Props</td>
+								<td>State</td>
+							</tr>
+						</thead>
+						<tbody>
+							<tr class="fragment">
+								<td>Purpose</td>
+								<td>Hold changing value</td>
+								<td>Pass data to child</td>
+							</tr>
+							<tr class="fragment">
+								<td>Where used</td>
+								<td>Declared Compoent</td>
+								<td>Child Compoent</td>
+							</tr>
+							<tr class="fragment">
+								<td>Change in Compoent</td>
+								<td>No</td>
+								<td>Yes</td>
+							</tr>
+							<tr class="fragment">
+								<td>Set Default value</td>
+								<td>constructor</td>
+								<td>Receiving component</td>
+							</tr>
+						</tbody>
+					</table>
 				</section>
 			</section>
 			<section>
 				<h2>Five core Activities</h2>
 				<ul>
 					<li>Manage Events</li>
-					<li>Component Life cycle</li>
 					<li>Load Data From server</li>
+					<li>Organize Architecture</li>
 					<li>Use External Library</li>
+					<li>Build and deploy</li>
 				</ul>
 			</section>
 			<section>

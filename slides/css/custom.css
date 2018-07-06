@@ -163,3 +163,7 @@ iframe.graphiql {
   float: left; 
   width: 50%
 }
+
+.small-table{
+  font-size: 12px;
+}
