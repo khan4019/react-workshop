@@ -192,9 +192,92 @@ npm start
 			<section>
 				<section>
 					<h2>Explore React</h2>
-					<p>Not an efficient way</p>
+					
+				</section>
+				<section>
+					<h2>How to start</h2>
+					<ul>
+						<li><a target="_blank" href="https://reactjs.org/docs/add-react-to-a-website.html">From scratch</a></li>
+						<li><a target="_blank" href="https://codepen.io/pen?&editors=0010">code pen editor</a></li>
+						<li><a target="_blank" href="https://codesandbox.io/s/new">Complete project online</a></li>
+						<!-- <ltarget="_blank" i><a href="https://reactjs.org/docs/getting-started.html">Stand alone html</a></li> -->
+						<li><a target="_blank" href="https://github.com/facebook/create-react-app">Create React App</a></li>
+						<li class="fragment">Create your own mess: (Job security)</li>
+					</ul>
+				</section>
+				<section>
+					<h2>Let's try it out</h2>
+					<img class="fragment" src="./images/try3.png" alt="">
 				</section>
 			</section>
+			<section>
+					<section>
+						<h1>ES6, ES7 Features</h1>
+					</section>
+					<section>
+						<h2>Arrow function</h2>
+						<pre class="hljs1"><code>
+	
+	const nums = [1, 2, 3, 4, 5, 6];
+	
+	var double = nums.map(function (item){
+		return item*2;
+	});
+	
+	
+	
+	const slim = nums.map( i => i*2);
+	
+							</code></pre>
+					</section>
+					<section>
+						<h2>Arrow function</h2>
+						<pre class="hljs1"><code>
+	const slim1 = () => 10;
+		
+	
+	const slim2 = x => x * x;
+		
+	
+	const slim3 = (a, b) => a + b;
+	
+	
+	const arrow = (a, b) => { const c = a + b; return c * 10; }
+								</code></pre>
+					</section>
+					<section>
+						<h2>Class</h2>
+						<img src="./images/es6/parent.png" alt="">
+					</section>
+					<section>
+						<h2>Extends</h2>
+						<img src="./images/es6/child.png" alt="" class="fragment1">
+					</section>
+					<section>
+						<h2>Default exports (one per module)</h2>
+						<pre><code>
+							export default function () {}
+	
+							import myFunc from 'myFunc';
+						</code></pre>
+						<pre class="fragment"><code>
+								//------ lib.js ------
+							export let counter = 3;
+	export function incCounter() {
+		counter++;
+	}
+	
+	//------ main.js ------
+	import { counter, incCounter } from './lib';
+						</code></pre>
+					</section>
+					<section>
+						<h2>Finish the import</h2>
+						<p>
+							<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/import">MDN: import</a>
+						</p>
+					</section>
+				</section>
 			<section>
 				<section>
 					<h1>JSX</h1>
@@ -202,7 +285,6 @@ npm start
 				<section>
 					<h2>Why JSX</h2>
 					<ul>
-						<li class="fragment">Not a templating language</li>
 						<li class="fragment">Basic Html powered by Javascript</li>
 						<li class="fragment">Describe how UI should look like</li>
 						<li class="fragment">Put markup and logic at the sameplaces</li>
@@ -224,78 +306,10 @@ npm start
 						</li>
 						<li class="fragment">
 							<code>className</code> instead of
-							<code>class</code>attribute</li>
+							<code>class</code> attribute</li>
 						<li class="fragment">Add key while looping array to create elements</li>
 
 					</ul>
-				</section>
-			</section>
-			<section>
-				<section>
-					<h1>ES6, ES7 Features</h1>
-				</section>
-				<section>
-					<h2>Arrow function</h2>
-					<pre class="hljs1"><code>
-
-const nums = [1, 2, 3, 4, 5, 6];
-
-var double = nums.map(function (item){
-	return item*2;
-});
-
-
-
-const slim = nums.map( i => i*2);
-
-						</code></pre>
-				</section>
-				<section>
-					<h2>Arrow function</h2>
-					<pre class="hljs1"><code>
-const slim1 = () => 10;
-	
-
-const slim2 = x => x * x;
-	
-
-const slim3 = (a, b) => a + b;
-
-
-const arrow = (a, b) => { const c = a + b; return c * 10; }
-							</code></pre>
-				</section>
-				<section>
-					<h2>Class</h2>
-					<img src="./images/es6/parent.png" alt="">
-				</section>
-				<section>
-					<h2>Extends</h2>
-					<img src="./images/es6/child.png" alt="" class="fragment1">
-				</section>
-				<section>
-					<h2>Default exports (one per module)</h2>
-					<pre><code>
-						export default function () {}
-
-						import myFunc from 'myFunc';
-					</code></pre>
-					<pre class="fragment"><code>
-							//------ lib.js ------
-						export let counter = 3;
-export function incCounter() {
-    counter++;
-}
-
-//------ main.js ------
-import { counter, incCounter } from './lib';
-					</code></pre>
-				</section>
-				<section>
-					<h2>Finish the import</h2>
-					<p>
-						<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/import">MDN: import</a>
-					</p>
 				</section>
 			</section>
 			<section>
@@ -306,13 +320,13 @@ import { counter, incCounter } from './lib';
 					<h2>Props</h2>
 					<ul>
 						<li>Send data to the child component</li>
-						<li class="fragment">pass data it by attribute</li>
-						<li class="fragment">values set by
+						<li class="fragment">Pass data it by attribute</li>
+						<li class="fragment">Values set by
 							<code>attrbute={}</code>
 						</li>
 						<li class="fragment">Can set default vlaue outside of the receiving Compoent</li>
 						<li class="fragment">
-							<code>children</code>is automatically added to pass child element</li>
+							<code>children</code> is automatically added to pass child element</li>
 						<li class="fragment">props is readonly</li>
 					</ul>
 				</section>
@@ -327,23 +341,23 @@ import { counter, incCounter } from './lib';
 						<li>Declared inside constructor</li>
 						<li class="fragment">Set initial value while declaring</li>
 						<li class="fragment">Don't set value directly</li>
-						<li class="fragment">use
+						<li class="fragment">Use
 							<code>this.setState()</code> and pass key-value</li>
-						<li class="fragment">State only available inside the component where it declared</li>
-						<li class="fragment">state updat is asynchronous</li>
+						<li class="fragment">only available inside the component where it declared</li>
+						<li class="fragment">State update is asynchronous</li>
 						<li class="fragment">
 							<code>this.setState()</code>can take a function as well</li>
 					</ul>
-					<p>state immutable(?)</p>
+					<!-- <p>state immutable(?)</p> -->
 				</section>
 				<section>
-					<h2>Props vs State</h2>
+					<h2>State vs Props</h2>
 					<table class="small-table">
 						<thead>
 							<tr class="fragment">
 								<td>Description</td>
-								<td>Props</td>
 								<td>State</td>
+								<td>Props</td>
 							</tr>
 						</thead>
 						<tbody>
@@ -377,6 +391,20 @@ import { counter, incCounter } from './lib';
 				</section>
 			</section>
 			<section>
+				<section>
+					<h1> Life Cycle</h1>
+				</section>
+				<section>
+					<h2>Fish Frog Life Cycle</h2>
+					<img src="./images/lifeCycle/fishCycle.png" alt="">
+				</section>
+				<section>
+					<h2>Chicken Life Cycle</h2>
+					<img src="./images/lifeCycle/chickenLifeCycle2.png" alt="">
+				</section>
+				<section>
+					<img src="./images/lifeCycle/humanCycle2.png" alt="">
+				</section>
 				<section>
 					<h1>Component Life Cycle</h1>
 				</section>
