@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Meetup July</title>
+    <script src="https://unpkg.com/react@16/umd/react.development.js" crossorigin></script>
+    <script src="https://unpkg.com/react-dom@16/umd/react-dom.development.js" crossorigin></script>
+    <script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
+    <style>
+        .greet{
+            color: steelblue;
+            border: 1px solid goldenrod;
+            margin: 10px;
+            padding: 5px;
+            border-radius: 5px;
+        }
+        button{
+            width: 50px; 
+            height: 50px;
+            border-radius: 25px;
+            font-size: 30px;
+            margin: 10px;
+        }
+        button:focus {outline:0;}
+    </style>
+</head>
+<body>
+    <div id="root"></div>
+    <script type="text/babel">
+
+
+       
+
+        function Greeting(props) {
+            return (
+            <div className="greet">
+                <h1>Hello {props.name}</h1>
+                <p>Good to see you</p>
+            </div>
+            )
+        }
+
+        class Counter extends React.Component{
+            constructor(){
+                super();
+                this.state = {
+                    count: 0
+                }
+            }
+
+            handleIncrease = () => {
+                const newCount = this.state.count + 1;
+                this.setState({count: newCount});
+            }
+
+            handleDecrease = () => {
+                const newCount = this.state.count - 1;
+                this.setState({count: newCount})
+            }
+            
+            render(){
+                return (
+                    <div>
+                        <h1>Your count: {this.state.count}</h1>
+                        <button onClick={this.handleDecrease}>-</button><button onClick={this.handleIncrease}>+</button>
+                    </div>
+                )
+            }
+        }
+
+         class Users extends React.Component{
+             constructor(props) {
+                 super(props);
+                 this.state={
+                     users:[]
+                 }
+             }
+             
+            componentDidMount(){
+                this.loadUser('');     
+            }
+            
+            loadUser(query){
+                query = query || 'eric';
+                const url = 'https://api.github.com/search/users?q='+query;
+                fetch(url).then(res => res.json())
+                    .then( data => {
+                        console.log(data);
+                        const first10 = data.items.slice(0,10);
+                        console.log(first10[0]);
+                        this.setState({users:first10});
+                    });
+            }
+
+            handleSearch = (event) => {
+                const search = event.target.value;
+                this.loadUser(search);
+            }
+            
+            render() {
+                return (
+                    <div>
+                        <h1>Users: {this.state.users.length}</h1>
+                        <input onChange={this.handleSearch}/>
+                        {
+                            this.state.users.map(user => <li key={user.login}>{user.login}</li>)
+                        }
+                    </div>
+                );
+            }
+        }
+
+        function App() {
+            return (
+            <div>
+                <Users></Users>
+            </div>
+            )
+        }
+        
+        
+
+        const root = document.getElementById('root');
+
+        ReactDOM.render(<App/>, root);
+    </script>
+</body>
+</html>

@@ -99,8 +99,12 @@
 			</section>
 			<section>
 				<section>
-					<h1>What is React?</h1>
+					<!-- <h1>What is React?</h1> -->
 					<img src="./images/react2.png" alt="">
+					<aside class="notes">
+						<h1>You already know what is React</h1>
+						<p>The most popular React Framework</p>
+					</aside>
 				</section>
 				<section>
 					<h2>Why React?</h2>
@@ -115,7 +119,7 @@
 					<aside class="notes">
 						<p>Vue jobs in indeed.com: 2.3k, angular 17k, react 54k</p>
 					</aside>
-					
+
 				</section>
 				<section>
 					<h2>React Vs Angular vs Vue</h2>
@@ -123,7 +127,11 @@
 					<br>
 					<img style="height: 150px;" src="./images/jobs.png" alt="" class="fragment">
 					<br>
-					<p><small><a href="https://vuejs.org/v2/guide/comparison.html">React vs Vue vs Angular</a></small></p>
+					<p>
+						<small>
+							<a href="https://vuejs.org/v2/guide/comparison.html">React vs Vue vs Angular</a>
+						</small>
+					</p>
 				</section>
 			</section>
 			<section>
@@ -139,9 +147,26 @@
 					<li>Component Life Cycle</li>
 				</ul>
 			</section>
+			<!-- <section>
+				<section>
+					<h2>Let's know about you</h2>
+				</section>
+				<section>
+					<ul>
+						<li>Used Hello world or more in last 1 yr?</li>
+						<li class="fragment">Know ES6 Class, arrow function</li>
+					</ul>
+					<aside class="notes">
+						<p>How many people are here</p>
+					</aside>
+				</section>
+			</section> -->
 			<section>
 				<section>
 					<h1>Component</h1>
+					<p>
+						<a target="_blank" href="http://thatjsdude.com/">explore Component</a>
+					</p>
 				</section>
 				<section>
 					<h2>What is a component</h2>
@@ -151,20 +176,6 @@
 						<li>Grouping</li>
 						<li>Breaking Down</li>
 					</ul>
-				</section>
-				<section>
-					<h2>Three ways to declare</h2>
-					<ol>
-						<li>As a
-							<code>const</code>
-						</li>
-						<li>As a
-							<code>function</code>
-						</li>
-						<li>As a
-							<code>class</code>
-						</li>
-					</ol>
 				</section>
 				<section>
 					<h1>Quiz Time?</h1>
@@ -192,76 +203,85 @@ npm start
 			<section>
 				<section>
 					<h2>Explore React</h2>
-					
 				</section>
 				<section>
 					<h2>How to start</h2>
 					<ul>
-						<li><a target="_blank" href="https://reactjs.org/docs/add-react-to-a-website.html">From scratch</a></li>
-						<li><a target="_blank" href="https://codepen.io/pen?&editors=0010">Codepen editor</a></li>
-						<li><a target="_blank" href="https://codesandbox.io/s/new">Complete project online</a></li>
+						<li>
+							<a target="_blank" href="https://reactjs.org/docs/add-react-to-a-website.html">From scratch</a>
+						</li>
+						<li>
+							<a target="_blank" href="https://codepen.io/pen?&editors=0010">Codepen editor</a>
+						</li>
+						<li>
+							<a target="_blank" href="https://codesandbox.io/s/new">Complete project online</a>
+						</li>
 						<!-- <ltarget="_blank" i><a href="https://reactjs.org/docs/getting-started.html">Stand alone html</a></li> -->
-						<li><a target="_blank" href="https://github.com/facebook/create-react-app">Create React App</a></li>
+						<li>
+							<a target="_blank" href="https://github.com/facebook/create-react-app">Create React App</a>
+						</li>
 						<li class="fragment">Create your own mess: (Job security)</li>
 					</ul>
 				</section>
 				<section>
 					<h2>Let's try it out</h2>
 					<img style="height: 300px;" class="fragment" src="./images/try3.png" alt="">
-					<p><small><a target="_blank" href="https://reactjs.org/docs/add-react-to-a-website.html">From scratch</a></small></p>
+					<p>
+						<small>
+							<a target="_blank" href="https://reactjs.org/docs/add-react-to-a-website.html">From scratch</a>
+						</small>
+					</p>
 				</section>
 			</section>
 			<section>
-					<section>
-						<h1>ES6, ES7 Features</h1>
-					</section>
-					<section>
-						<h2>Arrow function</h2>
-						<pre class="hljs1"><code>
+				<section>
+					<h1>ES6, ES7 Features</h1>
+				</section>
+				<section>
+					<h2>Arrow function</h2>
+					<pre class="hljs1"><code>
+const nums = [1, 2, 3, 4, 5, 6];
 	
-	const nums = [1, 2, 3, 4, 5, 6];
-	
-	var double = nums.map(function (item){
-		return item*2;
-	});
-	
+const double = nums.map(function (item){
+	return item*2;
+});
 	
 	
-	const slim = nums.map( i => i*2);
+	
+const slim = nums.map( i => i*2);
 	
 							</code></pre>
-					</section>
-					<section>
-						<h2>Arrow function</h2>
-						<pre class="hljs1"><code>
-	const slim1 = () => 10;
-		
-	
-	const slim2 = x => x * x;
-		
-	
-	const slim3 = (a, b) => a + b;
-	
-	
-	const arrow = (a, b) => { const c = a + b; return c * 10; }
-								</code></pre>
-					</section>
-					<section>
-						<h2>Class</h2>
-						<img src="./images/es6/parent.png" alt="">
-					</section>
-					<section>
-						<h2>Extends</h2>
-						<img src="./images/es6/child.png" alt="" class="fragment1">
-					</section>
-					<section>
-						<h2>Default exports (one per module)</h2>
-						<pre><code>
+				</section>
+				<section>
+					<h2>Arrow function</h2>
+					<pre class="hljs1"><code >
+const slim1 = () => 10;
+
+const slim2 = x => x * x;
+
+const slim3 = (a, b) => a + b;
+
+const add = (a, b) => { 
+	const c = a + b; 
+	return c * 10;
+}</code></pre>
+				</section>
+				<section>
+					<h2>Class</h2>
+					<img src="./images/es6/parent.png" alt="">
+				</section>
+				<section>
+					<h2>Extends</h2>
+					<img src="./images/es6/child.png" alt="" class="fragment1">
+				</section>
+				<section>
+					<h2>Default exports (one per module)</h2>
+					<pre><code>
 							export default function () {}
 	
 							import myFunc from 'myFunc';
 						</code></pre>
-						<pre class="fragment"><code>
+					<pre class="fragment"><code>
 								//------ lib.js ------
 							export let counter = 3;
 	export function incCounter() {
@@ -271,14 +291,14 @@ npm start
 	//------ main.js ------
 	import { counter, incCounter } from './lib';
 						</code></pre>
-					</section>
-					<section>
-						<h2>Finish the import</h2>
-						<p>
-							<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/import">MDN: import</a>
-						</p>
-					</section>
 				</section>
+				<section>
+					<h2>Finish the import</h2>
+					<p>
+						<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/import">MDN: import</a>
+					</p>
+				</section>
+			</section>
 			<section>
 				<section>
 					<h1>JSX</h1>
@@ -434,7 +454,6 @@ npm start
 					<img src="./images/lifeCycle/lifeCycle_full.png" alt="">
 				</section>
 			</section>
-
 			<section>
 				<h2>Five core Activities</h2>
 				<ol>
@@ -457,9 +476,9 @@ npm start
 				<section>
 					<img src="./images/redux/restroom4.jpeg" alt="">
 				</section>
-				<!-- <section>
-							<img src="./images/redux/restroom3.jpg" alt="">
-						</section> -->
+				<section>
+					<img src="./images/redux/restroom3.jpg" alt="">
+				</section>
 			</section>
 			<section>
 				<section>
@@ -509,43 +528,9 @@ npm start
 				</section>
 				<section>
 					<h2>What is Virtual DOM</h2>
-				</section>
-			</section>
-			<section>
-				<section>
-					<h1>Routing</h1>
-				</section>
-				<section>
-					<img src="./images/redux/restroom4.jpeg" alt="">
-				</section>
-				<section>
-					<img src="./images/redux/restroom3.jpg" alt="">
-				</section>
-			</section>
-			<section>
-				<section>
-					<h1>ema-john</h1>
-					<h2>Architecture Review</h2>
-				</section>
-				<section>
-					<img src="./images/redux/structure1.png" alt="">
-				</section>
-				<section>
-					<img src="./images/redux/structure2.png" alt="">
-				</section>
-				<section>
-					<img src="./images/redux/structure3.png" alt="">
-				</section>
-				<section>
-					<img src="./images/redux/structure5.png" alt="">
-				</section>
-				<section>
-					<img sr c="./images/redux/structure4.png" alt="">
-				</section>
-
-				<section>
-					<img src="./images/redux/superhero1.jpeg" alt="">
-					<p>To solve this problem, we need a super hero</p>
+					<ul>
+						<li>Virtual DOM — A JavaScript representation of the actual DOM.</li>
+					</ul>
 				</section>
 			</section>
 			<section>
